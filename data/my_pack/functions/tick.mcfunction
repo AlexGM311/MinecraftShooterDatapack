@@ -32,8 +32,8 @@ execute as @a[scores={HP=0..5}] at @s run playsound minecraft:block.bell.use mas
 
 execute as @a[gamemode=!creative] if predicate my_pack:infinite_block run give @s minecraft:birch_planks{Tags:["infinite_block"],display:{Name:'[{"text":"Бесконечный блок","italic":false}]'}} 1
 
-execute at @e[type=potion] if predicate my_pack:healing_potion run effect give @p instant_health 1 1 true
-execute at @e[type=potion] if predicate my_pack:healing_potion run scoreboard players set @p regentimer 600
+execute as @e[type=potion] as @s if predicate my_pack:healing_potion run effect give @p instant_health 1 1 true
+execute as @e[type=potion] as @s if predicate my_pack:healing_potion run scoreboard players set @p regentimer 600
 execute as @e[type=potion] if predicate my_pack:healing_potion run kill @s
 
 execute as @a[scores={regentimer=0..601}] run scoreboard players remove @s regentimer 1
