@@ -10,3 +10,4 @@ scoreboard objectives remove RegPlayers
 scoreboard objectives remove GameStartTrigger
 scoreboard objectives remove Plane
 team remove Players
+scoreboard objectives remove regentimer

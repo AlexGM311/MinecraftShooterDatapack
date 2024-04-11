@@ -24,3 +24,4 @@ team add OnPlane "Flying"
 team modify OnPlane nametagVisibility always
 team modify OnPlane friendlyFire false
 team modify OnPlane collisionRule never
+scoreboard objectives add regentimer dummy

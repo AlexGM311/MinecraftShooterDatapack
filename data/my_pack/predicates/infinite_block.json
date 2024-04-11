@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "type": "minecraft:player",
+    "equipment": {
+      "mainhand": {
+        "item": "minecraft:birch_planks",
+        "count": 1,
+        "nbt": "{Tags:['infinite']}"
+      }
+    }
+  }
+}
