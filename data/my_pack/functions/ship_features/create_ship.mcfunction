@@ -8,5 +8,4 @@ execute as @e[tag=plane_anchor] run execute at @s run fill ~4 ~-1 ~-3 ~4 ~-1 ~3 
 execute as @e[tag=plane_anchor] run execute at @s run setblock ~-2 ~ ~ minecraft:quartz_block replace
 
 scoreboard players set exists Plane 1
-execute as @e[tag=plane_anchor] at @s store result score height Plane run data get entity @s Pos[1]
-scoreboard players remove height Plane 5
+execute as @e[tag=plane_anchor] store result score height Plane run data get entity @s Pos[1]

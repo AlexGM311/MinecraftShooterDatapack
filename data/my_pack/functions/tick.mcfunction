@@ -20,7 +20,7 @@ kill @e[type=item,nbt={Item:{id:"minecraft:blaze_rod",tag:{Tags:['speedboost']}}
 
 execute as @e[type=item,nbt={Item:{id:"minecraft:enchanted_book",tag:{Tags:['soundradar']}}}] run tag @p add radar
 kill @e[type=item,nbt={Item:{id:"minecraft:enchanted_book",tag:{Tags:['soundradar']}}}]
-execute at @e[tag=!radar] run playsound entity.generic.explode master @a[tag=radar] ~ ~ ~ 1000 1.1 1.0
+execute at @a[tag=!radar] run playsound entity.generic.explode master @a[tag=radar] ~ ~ ~ 1000 1.1 1.0
 tag @a[tag=radar] remove radar
 
 execute as @a[scores={HP=5..14}] unless predicate my_pack:regenerating run effect give @s minecraft:regeneration 2 1 true
@@ -28,9 +28,8 @@ execute as @a[scores={HP=0..5}] unless predicate my_pack:regenerating run effect
 execute as @a[scores={HP=15..20}] run effect clear @s regeneration
 execute as @a[scores={HP=0..5}] run effect give @s minecraft:nausea 5 1 true
 execute as @a[scores={HP=0..5}] run effect give @s minecraft:speed 7 2 true
-execute as @a[scores={HP=0..5}] at @s run playsound minecraft:block.bell.use master @s ~ ~ ~ 3 0.8
 
-execute as @a[gamemode=!creative] if predicate my_pack:infinite_block run give @s minecraft:birch_planks{Tags:["infinite_block"],display:{Name:'[{"text":"Бесконечный блок","italic":false}]'}} 1
+execute as @a[gamemode=!creative] if predicate my_pack:infinite_block run replaceitem entity @s weapon.mainhand minecraft:birch_planks{Tags:["infinite_block"],display:{Name:'[{"text":"Бесконечный блок","italic":false}]'}} 2
 
 execute as @e[type=potion] as @s if predicate my_pack:healing_potion run effect give @p instant_health 1 1 true
 execute as @e[type=potion] as @s if predicate my_pack:healing_potion run scoreboard players set @p regentimer 600

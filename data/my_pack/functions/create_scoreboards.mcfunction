@@ -13,6 +13,7 @@ scoreboard objectives add ReadyToFight trigger
 scoreboard objectives add Plane dummy
 scoreboard players set exists Plane 0
 execute as @e[tag=plane_anchor] run scoreboard players add exists Plane 1
+execute as @e[tag=plane_anchor] store result score height Plane run data get entity @s Pos[1]
 scoreboard players set started RoundTime -1
 scoreboard objectives add PlayerY dummy
 scoreboard objectives add PlayerX dummy

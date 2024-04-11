@@ -7,7 +7,7 @@
       "mainhand": {
         "item": "minecraft:birch_planks",
         "count": 1,
-        "nbt": "{Tags:['infinite']}"
+        "nbt": "{Tags:['infinite_block']}"
       }
     }
   }
