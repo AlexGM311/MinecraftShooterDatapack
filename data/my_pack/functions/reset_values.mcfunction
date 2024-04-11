@@ -1,0 +1,2 @@
+function my_pack:delete_scoreboards
+function my_pack:create_scoreboards
